@@ -34,12 +34,14 @@ const emit = defineEmits(["loadComplete"]);
 
 // 壁纸随机数
 // 请依据文件夹内的图片个数修改 Math.random() 后面的第一个数字
-const bgRandom = Math.floor(Math.random() * 10 + 1);
+const bgRandom = Math.floor(Math.random() * 37 + 1);
+console.log(bgRandom);
+
 
 // 更换壁纸链接
 const changeBg = (type) => {
   if (type == 0) {
-    bgUrl.value = `/images/background${bgRandom}.jpg`;
+    bgUrl.value = `/images/background${bgRandom}.jpeg`;
   } else if (type == 1) {
     bgUrl.value = "https://api.dujin.org/bing/1920.php";
   } else if (type == 2) {
@@ -76,7 +78,7 @@ const imgLoadError = () => {
       fill: "#efefef",
     }),
   });
-  bgUrl.value = `/images/background${bgRandom}.jpg`;
+  bgUrl.value = `/images/background${bgRandom}.jpeg`;
 };
 
 // 监听壁纸切换
@@ -120,9 +122,7 @@ onBeforeUnmount(() => {
     object-fit: cover;
     backface-visibility: hidden;
     filter: blur(20px) brightness(0.3);
-    transition:
-      filter 0.3s,
-      transform 0.3s;
+    transition: filter 0.3s, transform 0.3s;
     animation: fade-blur-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     animation-delay: 0.45s;
   }

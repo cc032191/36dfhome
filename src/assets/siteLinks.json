@@ -2,12 +2,12 @@
   {
     "icon": "Blog",
     "name": "博客",
-    "link": "https://blog.imsyy.top/"
+    "link": "https://www.36dfplay.xyz/"
   },
   {
     "icon": "Cloud",
     "name": "网盘",
-    "link": "https://pan.imsyy.top/"
+    "link": "https://dfnav.36dfplay.xyz/"
   },
   {
     "icon": "CompactDisc",
@@ -15,23 +15,23 @@
     "link": "https://music.imsyy.top/"
   },
   {
-    "icon": "Compass",
-    "name": "起始页",
-    "link": "https://nav.imsyy.top/"
+    "icon": "Robot",
+    "name": "chatGPT",
+    "link": "https://chat.36dfplay.xyz/"
   },
   {
     "icon": "Book",
     "name": "网址集",
-    "link": "https://web.imsyy.top/"
+    "link": "https://nav.36dfplay.xyz/"
   },
   {
-    "icon": "Fire",
-    "name": "今日热榜",
-    "link": "https://hot.imsyy.top/"
+    "icon": "Images",
+    "name": "图床",
+    "link": "https://dfimg.36dfplay.xyz/"
   },
   {
     "icon": "LaptopCode",
-    "name": "站点监测",
-    "link": "https://status.imsyy.top/"
+    "name": "开发中...",
+    "link": "https://home.36dfplay.xyz/"
   }
 ]

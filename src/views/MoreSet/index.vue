@@ -13,8 +13,8 @@
     <el-row :gutter="40">
       <el-col :span="12" class="left">
         <div class="logo text-hidden">
-          <span class="bg">{{ siteUrl[0] }}</span>
-          <span class="sm">.{{ siteUrl[1] }}</span>
+          <span class="bg">{{ siteUrl[1] }}</span>
+          <span class="sm">.{{ siteUrl[2] }}</span>
         </div>
         <div class="version">
           <div class="num">v&nbsp;{{ config.version }}</div>
@@ -69,6 +69,8 @@ const siteUrl = computed(() => {
     const urlFormat = url.replace(/^(https?:\/\/)/, "");
     return urlFormat.split(".");
   }
+  console.log(url);
+
   return url.split(".");
 });
 

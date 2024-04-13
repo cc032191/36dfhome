@@ -12,6 +12,8 @@ export const getPlayerList = async (server, type, id) => {
   );
   const data = await res.json();
 
+  console.log(data);
+
   if (data[0].url.startsWith("@")) {
     // eslint-disable-next-line no-unused-vars
     const [handle, jsonpCallback, jsonpCallbackFunction, url] = data[0].url.split("@").slice(1);

@@ -94,7 +94,7 @@ onMounted(() => {
         // 生成歌单
         playList.value = res;
         console.log("音乐加载完成");
-        console.log(playList.value);
+        // console.log(playList.value);
         console.log(playIndex.value, playList.value.length, props.volume);
       });
     } catch (err) {

@@ -1,12 +1,13 @@
 <template>
-  <div class="more-content">您可在此编写任意内容</div>
+  <div class="more-content"></div>
 </template>
 
 <style lang="scss" scoped>
 .more-content {
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin-top: 20px;
   width: 100%;
   height: 100%;

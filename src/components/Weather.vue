@@ -1,5 +1,9 @@
 <template>
-  <div class="weather" v-if="weatherData.adCode.city && weatherData.weather.weather">
+  <div
+    class="weather"
+    v-if="weatherData.adCode.city && weatherData.weather.weather"
+    @click="updateWeather"
+  >
     <span>{{ weatherData.adCode.city }}&nbsp;</span>
     <span>{{ weatherData.weather.weather }}&nbsp;</span>
     <span>{{ weatherData.weather.temperature }}℃</span>
@@ -19,7 +23,7 @@
 
 <script setup>
 import { getAdcode, getWeather, getOtherWeather } from "@/api";
-import { Error } from "@icon-park/vue-next";
+import { Error, Sun, Attention } from "@icon-park/vue-next";
 
 // 高德开发者 Key
 const mainKey = import.meta.env.VITE_WEATHER_KEY;
@@ -47,6 +51,39 @@ const getTemperature = (min, max) => {
   } catch (error) {
     console.error("计算温度出现错误：", error);
     return "NaN";
+  }
+};
+
+const canClick = ref(true);
+
+const updateWeather = async () => {
+  if (canClick.value) {
+    canClick.value = false;
+    setTimeout(() => {
+      canClick.value = true;
+    }, 3000); // 2秒后重新允许点击
+
+    // 调用获取天气数据的函数
+    await getWeatherData();
+    ElMessage({
+      message: "天气数据已更新",
+      grouping: true,
+      duration: 1000,
+      icon: h(Sun, {
+        theme: "outline",
+        fill: "#efefef"
+      }),
+    });
+  } else {
+    ElMessage({
+      message: "更新太频繁了哦！",
+      grouping: true,
+      duration: 1000,
+      icon: h(Attention, {
+        theme: "outline",
+        fill: "#efefef"
+      }),
+    });
   }
 };
 
