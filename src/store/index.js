@@ -7,7 +7,7 @@ export const mainStore = defineStore("main", {
       innerWidth: null, // 当前窗口宽度
       coverType: "0", // 壁纸种类
       siteStartShow: false, // 建站日期显示
-      musicClick: false, // 音乐链接是否跳转
+      musicClick: true, // 音乐链接是否跳转
       musicIsOk: false, // 音乐是否加载完成
       musicVolume: 0, // 音乐音量;
       musicOpenState: false, // 音乐面板开启状态
@@ -29,24 +29,24 @@ export const mainStore = defineStore("main", {
   },
   getters: {
     // 获取歌词
-    getPlayerLrc(state) {
+    getPlayerLrc (state) {
       return state.playerLrc;
     },
     // 获取歌曲信息
-    getPlayerData(state) {
+    getPlayerData (state) {
       return {
         name: state.playerTitle,
         artist: state.playerArtist,
       };
     },
     // 获取页面宽度
-    getInnerWidth(state) {
+    getInnerWidth (state) {
       return state.innerWidth;
     },
   },
   actions: {
     // 更改当前页面宽度
-    setInnerWidth(value) {
+    setInnerWidth (value) {
       this.innerWidth = value;
       if (value >= 720) {
         this.mobileOpenState = false;
@@ -54,7 +54,7 @@ export const mainStore = defineStore("main", {
       }
     },
     // 更改播放状态
-    setPlayerState(value) {
+    setPlayerState (value) {
       if (value) {
         this.playerState = false;
       } else {
@@ -62,16 +62,16 @@ export const mainStore = defineStore("main", {
       }
     },
     // 更改歌词
-    setPlayerLrc(value) {
+    setPlayerLrc (value) {
       this.playerLrc = value;
     },
     // 更改歌曲数据
-    setPlayerData(title, artist) {
+    setPlayerData (title, artist) {
       this.playerTitle = title;
       this.playerArtist = artist;
     },
     // 更改壁纸加载状态
-    setImgLoadStatus(value) {
+    setImgLoadStatus (value) {
       this.imgLoadStatus = value;
     },
   },
