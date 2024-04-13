@@ -58,6 +58,7 @@ const siteLinksList = computed(() => {
     const subArr = siteLinks.slice(i, i + 6);
     result.push(subArr);
   }
+  // console.log(result);
   return result;
 });
 
