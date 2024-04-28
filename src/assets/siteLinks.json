@@ -2,12 +2,12 @@
   {
     "icon": "Blog",
     "name": "博客",
-    "link": "https://www.36dfplay.xyz/"
+    "link": "https://home.36dfplay.xyz/"
   },
   {
     "icon": "Cloud",
     "name": "网盘",
-    "link": "https://dfnav.36dfplay.xyz/"
+    "link": "https://cloud.36dfplay.xyz/"
   },
   {
     "icon": "CompactDisc",
@@ -22,7 +22,7 @@
   {
     "icon": "Book",
     "name": "网址集",
-    "link": "https://nav.36dfplay.xyz/"
+    "link": "https://dfnav.36dfplay.xyz/"
   },
   {
     "icon": "Images",
@@ -32,6 +32,6 @@
   {
     "icon": "LaptopCode",
     "name": "开发中...",
-    "link": "https://home.36dfplay.xyz/"
+    "link": "https://dfblog.36dfplay.xyz/"
   }
 ]

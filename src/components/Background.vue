@@ -34,14 +34,13 @@ const emit = defineEmits(["loadComplete"]);
 
 // 壁纸随机数
 // 请依据文件夹内的图片个数修改 Math.random() 后面的第一个数字
-const bgRandom = Math.floor(Math.random() * 37 + 1);
-console.log(bgRandom);
-
+// const bgRandom = Math.floor(Math.random() * 37 + 1);
+// console.log(bgRandom);
 
 // 更换壁纸链接
 const changeBg = (type) => {
   if (type == 0) {
-    bgUrl.value = `/images/background${bgRandom}.jpeg`;
+    bgUrl.value = "https://apimg.36dfplay.cn/random.php";
   } else if (type == 1) {
     bgUrl.value = "https://api.dujin.org/bing/1920.php";
   } else if (type == 2) {
@@ -53,12 +52,9 @@ const changeBg = (type) => {
 
 // 图片加载完成
 const imgLoadComplete = () => {
-  imgTimeout.value = setTimeout(
-    () => {
-      store.setImgLoadStatus(true);
-    },
-    Math.floor(Math.random() * (600 - 300 + 1)) + 300,
-  );
+  imgTimeout.value = setTimeout(() => {
+    store.setImgLoadStatus(true);
+  }, Math.floor(Math.random() * (600 - 300 + 1)) + 300);
 };
 
 // 图片动画完成
