@@ -60,7 +60,7 @@ export const getTimeCapsule = () => {
       total: total,
       passed: passed,
       remaining: remaining,
-      percentage: percentage.toFixed(2),
+      percentage: parseFloat(percentage.toFixed(2)),
     };
   };
   return {
