@@ -119,8 +119,6 @@ const getWeatherData = async () => {
       };
       // 获取天气信息
       const result = await getWeather(mainKey, weatherData.adCode.adcode);
-      console.log(result);
-      
       weatherData.weather = {
         weather: result.lives[0].weather,
         temperature: result.lives[0].temperature,
