@@ -2,12 +2,12 @@
   {
     "icon": "Blog",
     "name": "博客",
-    "link": "https://home.36dfplay.xyz/"
+    "link": "https://home.36dfplay.cn/"
   },
   {
     "icon": "Cloud",
     "name": "网盘",
-    "link": "https://cloud.36dfplay.xyz/"
+    "link": "https://cs.36dfplay.cn/"
   },
   {
     "icon": "CompactDisc",
@@ -17,21 +17,21 @@
   {
     "icon": "Robot",
     "name": "chatGPT",
-    "link": "https://chat.36dfplay.xyz/"
+    "link": "https://chat.36dfplay.cn/"
   },
   {
     "icon": "Book",
     "name": "网址集",
-    "link": "https://dfnav.36dfplay.xyz/"
+    "link": "https://dfnav.36dfplay.cn/"
   },
   {
     "icon": "Images",
     "name": "图床",
-    "link": "https://dfimg.36dfplay.xyz/"
+    "link": "https://dfimg.36dfplay.cn/"
   },
   {
     "icon": "LaptopCode",
     "name": "开发中...",
-    "link": "https://dfblog.36dfplay.xyz/"
+    "link": "https://dfblog.36dfplay.cn/"
   }
 ]
