@@ -38,9 +38,9 @@ const emit = defineEmits(["loadComplete"]);
 // console.log(bgRandom);
 
 // 更换壁纸链接
-const changeBg = (type) => {
+const changeBg = type => {
   if (type == 0) {
-    bgUrl.value = "https://apimg.36dfplay.cn/random.php";
+    bgUrl.value = "https://apimg.36playking.buzz/random.php";
   } else if (type == 1) {
     bgUrl.value = "https://api.dujin.org/bing/1920.php";
   } else if (type == 2) {
@@ -74,13 +74,14 @@ const imgLoadError = () => {
       fill: "#efefef",
     }),
   });
-  bgUrl.value = `/images/background${bgRandom}.jpeg`;
+  // 切换到必应壁纸作为备用
+  bgUrl.value = "https://api.dujin.org/bing/1920.php";
 };
 
 // 监听壁纸切换
 watch(
   () => store.coverType,
-  (value) => {
+  value => {
     changeBg(value);
   },
 );
@@ -88,8 +89,6 @@ watch(
 onMounted(() => {
   // 加载壁纸
   changeBg(store.coverType);
-
-  
 });
 
 onBeforeUnmount(() => {
